@@ -1,0 +1,123 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<style>
+    /* Стили для карусели */
+    .carousel-inner img {
+        max-height: 400px; /* Уменьшаем высоту изображений */
+        width: auto; /* Сохраняем пропорции */
+        margin: 0 auto; /* Центрируем изображения */
+    }
+
+    .carousel-caption p {
+        color: white;
+        font-weight: bold; 
+        font-size: 18px; 
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.8); 
+    }
+
+    .carousel-caption .btn {
+        font-weight: bold; 
+    }
+</style>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <!-- Слайд 1 -->
+        <div class="item active">
+            <img src="{% static 'app/content/cat1.png' %}" alt="Коллекция Meowdidas" style="max-width: 80%;" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    <strong>Новая коллекция "Purr-fect Style" уже здесь!</strong>
+                    <a class="btn btn-default" href="/collection">
+                        Смотреть
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Слайд 2 -->
+        <div class="item">
+            <img src="{% static 'app/content/cat2.png' %}" alt="Акция для котов" style="max-width: 80%;" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    <strong>Скидка 30% на все кошачьи аксессуары!</strong>
+                    <a class="btn btn-default" href="/promo">
+                        Успейте!
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Слайд 3 -->
+        <div class="item">
+            <img src="{% static 'app/content/cat3.png' %}" alt="Лимитированная серия" style="max-width: 80%;" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    <strong>Лимитированная серия "Whiskers Edition"</strong>
+                    <a class="btn btn-default" href="/limited">
+                        Подробнее
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Слайд 4 -->
+        <div class="item">
+            <img src="{% static 'app/content/ca4.png' %}" alt="Бесплатная доставка" style="max-width: 80%;" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    <strong>Бесплатная доставка для всех заказов от 1999₽</strong>
+                    <a class="btn btn-default" href="/delivery">
+                        Условия
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div class="jumbotron">
+    <h1>О нас</h1>
+    <p class="lead">Meowdidas — это не просто магазин, это целый мир моды для ваших котиков. Мы создаем одежду, которая подчеркивает индивидуальность вашего питомца и делает его жизнь комфортнее.</p>
+    <p><a href="https://www.meowdidas.com/" class="btn btn-primary btn-large">Узнать больше &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Наша миссия</h2>
+        <p>
+            Мы стремимся сделать жизнь ваших котиков ярче и удобнее. Наши вещи создаются с любовью и заботой о каждом питомце.
+        </p>
+        <p><a class="btn btn-default" href="https://meowdidas.com/mission">Узнать больше &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Новые коллекции</h2>
+        <p>Каждый сезон мы представляем новые коллекции, вдохновленные последними трендами в мире моды для животных.</p>
+        <p><a class="btn btn-default" href="https://meowdidas.com/new-collections">Узнать больше &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Отзывы</h2>
+        <p>Наши клиенты довольны, а их котики — счастливы! Читайте отзывы и делитесь своими впечатлениями.</p>
+        <p><a class="btn btn-default" href="https://meowdidas.com/reviews">Узнать больше &raquo;</a></p>
+    </div>
+</div>
+
+{% endblock %}

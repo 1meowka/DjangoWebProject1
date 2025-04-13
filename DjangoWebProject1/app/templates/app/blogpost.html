@@ -1,0 +1,30 @@
+{% extends "app/layout.html" %}
+{% block content %}
+<h2>{{ post_l.title }}</h2>
+{% if post_l.image and post_l.image.url != 'media/cat1.png' %}
+<img src="{{ post_l.image.url }}" alt="Картинка" width="300" height="200" />
+{% endif %}
+<p>{{ post_l.content|linebreaksbr }}</p>
+
+{% if user.is_authenticated %}
+<h3>Добавить комментарий</h3>
+<form method="POST">
+    {% csrf_token %}
+    <div>
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Отправить комментарий</button>
+    </div>
+</form>
+{% else %}
+<h3>Для добавления своего комментария, пожалуйста, авторизируйтесь</h3>
+{% endif %}
+
+{% for comment in comments %}
+<hr />
+<h7>{{ comment.date }}</h7>
+<h5>{{ comment.author }}</h5>
+<p>{{ comment.text|linebreaksbr }}</p>
+{% endfor %}
+
+<p><a href="{% url 'blog' %}">Назад</a></p>
+{% endblock %}

@@ -1,0 +1,281 @@
+﻿/* Основные стили */
+body {
+    padding-top: 70px;
+    padding-bottom: 80px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f6ff; /* Светло-фиолетовый фон */
+    color: #4a4a4a; /* Темно-серый текст */
+    line-height: 1.6;
+}
+
+/* Центрирование контента */
+.body-content {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Навигационная панель */
+.navbar-inverse {
+    background: linear-gradient(135deg, #6f42c1, #8e44ad); /* Градиентный фиолетовый */
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+    .navbar-inverse .navbar-brand {
+        color: #fff;
+        font-weight: bold;
+        font-size: 24px;
+        transition: color 0.3s ease;
+    }
+
+        .navbar-inverse .navbar-brand:hover {
+            color: #ffccf9; /* Розоватый оттенок при наведении */
+        }
+
+    .navbar-inverse .navbar-nav > li > a {
+        color: #fff;
+        font-size: 16px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+        .navbar-inverse .navbar-nav > li > a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #ffccf9; /* Розоватый оттенок при наведении */
+        }
+
+/* Стили для правой части навигации (логин/логаут) */
+.navbar-right {
+    margin-right: 0; /* Убираем отступ справа */
+    display: flex; /* Размещаем элементы в строку */
+    align-items: center; /* Выравниваем по центру */
+    flex-wrap: nowrap; /* Запрещаем перенос */
+}
+
+.navbar-nav.navbar-right > li {
+    margin-left: 10px; /* Отступ между элементами */
+    white-space: nowrap; /* Запрещаем перенос текста */
+}
+
+.navbar-right a {
+    font-size: 14px; /* Уменьшаем размер */
+    padding: 15px 8px !important; /* Оптимизация отступов */
+}
+
+/* Уменьшаем отступы в навбаре */
+.navbar-inverse .navbar-nav > li > a {
+    padding: 15px 12px; /* Было 15px 20px - уменьшаем */
+    font-size: 14px; /* Уменьшаем шрифт пунктов меню */
+}
+
+/* Кнопки */
+.btn-primary {
+    background: linear-gradient(135deg, #6f42c1, #8e44ad);
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(111, 66, 193, 0.4);
+    }
+
+.btn-default {
+    background: #fff;
+    border: 1px solid #6f42c1;
+    color: #6f42c1;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+    .btn-default:hover {
+        background-color: #6f42c1;
+        color: #fff;
+    }
+
+/* Формы */
+input,
+select,
+textarea {
+    max-width: 100%;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 25px; /* Округленные углы */
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+        border-color: #6f42c1;
+        box-shadow: 0 0 8px rgba(111, 66, 193, 0.3);
+        outline: none;
+    }
+
+    /* Стили для чекбоксов */
+    input[type="checkbox"] {
+        width: auto; /* Сброс ширины для чекбоксов */
+        margin-right: 10px;
+    }
+
+/* Стили для текстовых областей */
+textarea {
+    resize: vertical; /* Разрешить изменение высоты */
+    min-height: 100px;
+}
+
+/* Стили для выпадающих списков */
+select {
+    appearance: none; /* Убрать стандартный вид */
+    background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236f42c1'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e") no-repeat right 10px center;
+    background-size: 12px;
+    padding-right: 30px;
+}
+
+/* Стили для валидации */
+.field-validation-error {
+    color: #ff6b6b; /* Красный с оттенком розового */
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #ff6b6b;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #ff6b6b;
+    background-color: #ffe6e6;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: linear-gradient(135deg, #6f42c1, #8e44ad);
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+    footer p {
+        margin: 0;
+        font-size: 14px;
+    }
+
+/* Дополнительные стили для красоты */
+.jumbotron {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+    .jumbotron h1 {
+        color: #6f42c1;
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .jumbotron p {
+        font-size: 18px;
+        color: #666;
+    }
+
+h1, h2, h3 {
+    color: #6f42c1;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #6f42c1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+    a:hover {
+        color: #8e44ad;
+        text-decoration: underline;
+    }
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.jumbotron, .btn, .navbar-brand {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Милые детали */
+.cat-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Стили для радиокнопок */
+.gender-container {
+    margin-bottom: 15px;
+}
+
+.gender-options {
+    display: flex; /* Размещаем радиокнопки в одну строку */
+    gap: 20px; /* Расстояние между радиокнопками */
+    margin-top: 10px;
+}
+
+.gender-option {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Расстояние между радиокнопкой и текстом */
+}
+
+/* Стили для радиокнопок */
+input[type="radio"] {
+    margin: 0; /* Убираем стандартные отступы */
+    width: auto; /* Сбрасываем ширину */
+}
