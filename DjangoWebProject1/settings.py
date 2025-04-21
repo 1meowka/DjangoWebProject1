@@ -26,13 +26,11 @@ SECRET_KEY = '50413964-ae12-468b-b4a8-df976c1241a4'
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    '1meowdidas1.pythonanywhere.com', 
-    'www.1meowdidas1.pythonanywhere.com', 
+    'meowadidas.pythonanywhere.com',  # без пробела в начале и конце
+    'www.meowadidas.pythonanywhere.com',  # если используешь www
     'localhost',
     '127.0.0.1',
 ]
-
-
 
 # Application references
 # https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-INSTALLED_APPS
