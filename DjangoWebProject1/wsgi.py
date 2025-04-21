@@ -1,5 +1,5 @@
 """
-WSGI config for lab4 project.
+WSGI config for DjangoWebProject1 project.
 
 This module contains the WSGI application used by Django's development server
 and any production WSGI deployments. It should expose a module-level variable
@@ -17,12 +17,7 @@ https://docs.djangoproject.com/en/2.1/howto/deployment/wsgi/
 """
 
 import os
-import sys
 from django.core.wsgi import get_wsgi_application
-
-path = '/home/1meowka/DjangoWebProject1/DjangoWebProject1'
-if path not in sys.path:
-    sys.path.append(path)
 
 os.environ.setdefault(
     'DJANGO_SETTINGS_MODULE',
