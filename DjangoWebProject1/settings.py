@@ -1,5 +1,5 @@
 """
-Django settings for lab4 project.
+Django settings for DjangoWebProject1 project.
 
 Based on 'django-admin startproject' using Django 2.1.2.
 
@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/2.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
 """
-
+import sys
 import os
 import posixpath
 
@@ -20,14 +20,19 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '030ef4c9-e94d-4a14-9531-b26e69ebf7aa'
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+SECRET_KEY = '50413964-ae12-468b-b4a8-df976c1241a4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '1meowdidas.pythonanywhere.com', 
+    'www.1meowdidas.pythonanywhere.com', 
+    'localhost',
+    '127.0.0.1',
+]
+
+
 
 # Application references
 # https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-INSTALLED_APPS
@@ -54,7 +59,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'lab4.urls'
+ROOT_URLCONF = 'DjangoWebProject1.urls'
 
 # Template configuration
 # https://docs.djangoproject.com/en/2.1/topics/templates/
@@ -75,7 +80,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'lab4.wsgi.application'
+WSGI_APPLICATION = 'DjangoWebProject1.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 DATABASES = {
@@ -115,5 +120,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media2')
-MEDIA_URL = '/media2/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+FILE_UPLOAD_PERMISSIONS = 0o644
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
