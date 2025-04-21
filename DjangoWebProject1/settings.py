@@ -26,8 +26,8 @@ SECRET_KEY = '50413964-ae12-468b-b4a8-df976c1241a4'
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    '1meowdidas.pythonanywhere.com', 
-    'www.1meowdidas.pythonanywhere.com', 
+    '1meowdidas1.pythonanywhere.com', 
+    'www.1meowdidas1.pythonanywhere.com', 
     'localhost',
     '127.0.0.1',
 ]
